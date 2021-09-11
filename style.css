@@ -6,6 +6,7 @@
     --grayish-blue: hsl(227, 10%, 46%);
     --dark-grey: hsl(0, 0%, 59%);
 	--white: #fff;
+	--border-color: hsl(0deg 7% 87%);
 }
 * {
     box-sizing: border-box;
@@ -19,12 +20,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: right 50vw bottom 50vh, left 50vw top 50vh;
 }
-/* body::before {
-	content: url(/images/bg-pattern-top.svg);
-	position: absolute;
-	top: -145%;
-    left: -40%;
-} */
 img {
     max-width: 100%;
     height: auto;
@@ -41,25 +36,13 @@ img {
 	 position: relative;
 
 }
-/* .pattern__bottom,
-.pattern__top {
-	position: absolute;
-}
-.pattern__bottom {
-	bottom: -115%;
-    right: -30%;
-}
-.pattern__top {
-	top: -95%;
-    left: -30%;
-} */
 .card {
     width: 350px;
     border-radius: 15px;
 	overflow: hidden;
 	background-color: var(--white);
 	z-index: 1;
-	box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
 }
 .card__pattern {
 	background-image: url(/images/bg-pattern-card.svg);
@@ -85,8 +68,9 @@ img {
 	margin-bottom: 5px;
 }
 .card__age {
-font-weight: 400;
-color: var(--dark-grey);
+	font-weight: 400;
+	color: var(--dark-grey);
+	margin-left: 5px;
 }
 .card__town {
 	color: var(--dark-grey);
@@ -97,7 +81,7 @@ color: var(--dark-grey);
 	align-items: center;
 	padding: 25px 20px;
 	color: var(--grayish-blue);
-	border-top: 1px solid var(--dark-grey);
+	border-top: 1px solid var(--border-color);
 	margin-top: 25px;
 }
 .card__stat span {
@@ -106,9 +90,12 @@ color: var(--dark-grey);
 	font-size: 18px;
 	font-weight: 700;
 }
+.card__stat-num {
+	margin-bottom: 5px;
+}
 .card__stat .card__stat-name {
 	color: var(--dark-grey);
-	font-size: 10px;
+	font-size: 12px;
 	font-weight: 400;
 	letter-spacing: 1px;
 }
