@@ -99,3 +99,8 @@ img {
 	font-weight: 400;
 	letter-spacing: 1px;
 }
+@media screen and (max-width: 375px) {
+	body {
+		background-position: right 44vw bottom 32vh, left 44vw top 38vh;
+	}
+}
