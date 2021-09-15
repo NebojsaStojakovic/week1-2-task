@@ -104,3 +104,9 @@ img {
 		background-position: right 44vw bottom 32vh, left 44vw top 38vh;
 	}
 }
+@media screen and (orientation: landscape) {
+	.container {
+		height: auto;
+		padding: 50px 25px;
+	}
+}
