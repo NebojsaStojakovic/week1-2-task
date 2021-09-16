@@ -29,11 +29,11 @@ img {
     padding: 0 25px;
  	max-width: 1180px;
  	margin: 0 auto;
-	 height: 100vh;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-	 position: relative;
+	height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	position: relative;
 
 }
 .card {
@@ -104,7 +104,7 @@ img {
 		background-position: right 44vw bottom 32vh, left 44vw top 38vh;
 	}
 }
-@media screen and (orientation: landscape) {
+@media screen and (max-width: 768px) and (orientation: landscape) {
 	.container {
 		height: auto;
 		padding: 50px 25px;
