@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --dark-blue: hsl(229, 23%, 23%);
+    --grayish-blue: hsl(227, 10%, 46%);
+    --dark-grey: hsl(0, 0%, 59%);
+	--white: #fff;
+	--border-color: hsl(0deg 7% 87%);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--dark-cyan);
+	background-image: url(/images/bg-pattern-top.svg), url(/images/bg-pattern-bottom.svg);
+	background-repeat: no-repeat;
+	background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.container {
+    padding: 0 25px;
+ 	max-width: 1180px;
+ 	margin: 0 auto;
+	height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	position: relative;
+
+}
+.card {
+    width: 350px;
+    border-radius: 15px;
+	overflow: hidden;
+	background-color: var(--white);
+	z-index: 1;
+	box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+}
+.card__pattern {
+	background-image: url(/images/bg-pattern-card.svg);
+	height: 140px;
+	position: relative;
+}
+.card__pattern img {
+	position: absolute;
+	bottom: -54px;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 5px solid var(--white);
+	border-radius: 50%;
+}
+.card__details {
+	padding-top: 73px;
+	text-align: center;
+}
+.card__name {
+	font-size: 19px;
+	font-weight: 700;
+	color: var(--grayish-blue);
+	margin-bottom: 5px;
+}
+.card__age {
+	font-weight: 400;
+	color: var(--dark-grey);
+	margin-left: 5px;
+}
+.card__town {
+	color: var(--dark-grey);
+}
+.card__stats {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 25px 20px;
+	color: var(--grayish-blue);
+	border-top: 1px solid var(--border-color);
+	margin-top: 25px;
+}
+.card__stat span {
+	display: block;
+	color: var(--grayish-grey);
+	font-size: 18px;
+	font-weight: 700;
+}
+.card__stat-num {
+	margin-bottom: 5px;
+}
+.card__stat .card__stat-name {
+	color: var(--dark-grey);
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+@media screen and (max-width: 375px) {
+	body {
+		background-position: right 44vw bottom 32vh, left 44vw top 38vh;
+	}
+}
+@media screen and (max-width: 768px) and (orientation: landscape) {
+	.container {
+		height: auto;
+		padding: 50px 25px;
+	}
+}
